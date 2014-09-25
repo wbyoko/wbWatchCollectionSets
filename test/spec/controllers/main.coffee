@@ -67,12 +67,12 @@ describe 'Decorator: $rootScope: wbWatchCollectionSets', ->
       expect(flatten($log.log.logs)).toEqual([])
 
       do $log.reset
-      $rootScope.items.unshift 'william'
+      $rootScope.items.push 'william'
       do $rootScope.$digest
       expect(flatten($log.log.logs)).toEqual([])
       
       do $log.reset
-      do $rootScope.items.pop
-      do $rootScope.items.pop
+      do $rootScope.items.shift
+      do $rootScope.items.shift
       do $rootScope.$digest
-      expect(flatten($log.log.logs)).toEqual(["1:igor", "2:misko"])
+      expect(flatten($log.log.logs)).toEqual(["0:igor", "1:misko"])
