@@ -1,4 +1,3 @@
-### Status
 [![Build Status](https://travis-ci.org/wbyoko/wbWatchCollectionSets.png)](https://travis-ci.org/wbyoko/wbWatchCollectionSets)
 
 
